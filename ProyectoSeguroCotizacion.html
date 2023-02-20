@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO FINAL</title>
+</head>
+<body>
+    <script>
+        //PRECIO BASE
+       var precio_base = 2000
+       //PRECIO FINAL
+       var precio_final = 0
+
+       //Valores de los recargos 
+        var edad_18 = 0.1 // 10%
+        var edad_25 = 0.2 // 20%
+        var edad_50 = 0.3 // 30%
+
+        var casado_18 = 0.1 // 10%
+        var casado_25 = 0.2 // 20%
+        var casado_50 = 0.3 // 30%
+
+        var hijos_recargo = 0.2 // 20%
+
+       var cotizar = prompt("Quiere realizar una cotizacion?", "Si o No")
+       while("SI"== cotizar.toUpperCase())
+       {
+            var nombre = prompt("INGRESE SU NOMBRE", "Unicamente Letras")
+            var edad = prompt("INGRESE SU EDAD", "Unicamente Numeros")
+            var recargo_total = 0 // Inicializar recargo_total
+
+            if(edad>18)
+            {
+                if(edad>=18 && edad<25)
+                {
+                    recargo = precio_base * edad_18
+                    recargo_total = recargo_total + recargo
+                }
+                else if(edad>=25 && edad<=49)
+                {
+                    recargo = precio_base * edad_25
+                    recargo_total = recargo_total + recargo
+                }
+                else 
+                {
+                    recargo = precio_base * edad_50
+                    recargo_total = recargo_total + recargo
+                }  
+            
+                //CONSULTAMOS SOBRE SU STATUS LABORAL
+                var empleo = prompt("USTED ACTUALMENTE TRABAJA?", "Si o No")
+                if("SI"== empleo.toUpperCase())
+                {
+                    var salario = prompt("CUAL ES EL MONTO DE SU SUELDO?")
+                    recargo = salario *0.05
+                    recargo_total= recargo_total + recargo
+                }
+//CONSULTAMOS SOBRE SU STATUS DE PROPIEDADES
+            var propiedades = prompt("USTED CUENTA CON PROPIEDADES?", "Si o No")
+            if("SI"== propiedades.toUpperCase())
+            {
+                var total_propiedades = prompt("CON CUANTAS PROPIEDADES CUENTA ACTUALMENTE?")
+                calcular_recargo = (total_propiedades*35)
+                recargo = (precio_base + total_propiedades)/100
+                recargo_total= recargo_total + recargo
+            }
+
+            //CONSULTAMOS SI TIENE CONYUGE PARA CALCULAR EL RECARGO 
+            var estado_civil = prompt("¿ESTA USTED ACTUALMENTE CASADO/A?", "Si o No")
+            if("SI" == estado_civil.toUpperCase())
+            {
+            var edad_conyuge = prompt("¿QUE EDAD TIENE SU ESPOSO/A?", "si/no")
+            if(edad_conyuge>=18 && edad_conyuge<25)
+                {
+                    recargo = precio_base * casado_18
+                    recargo_total = recargo_total + recargo
+                }
+                    else if(edad_conyuge>=25 && edad_conyuge<=49)
+                {
+                    recargo = precio_base * casado_25
+                    recargo_total = recargo_total + recargo
+                }
+                    else 
+                {
+                        recargo = precio_base * casado_50
+                        recargo_total = recargo_total + recargo
+                }    
+            }
+            var hijos = prompt("¿TIENE HIJOS/AS?", "Si o No")
+            if("SI" == estado_civil.toUpperCase())
+            {
+                var cantidad_hijos = prompt("CUANTOS HIJOS/AS TIENE", "Por Favor Ingresa Numeros")
+                if ( cantidad_hijos>=1)
+                {
+                    recargo = precio_base * hijos_recargo
+                    recargo_total = recargo_total +recargo
+                }
+            }
+            var precio_final = recargo_total + precio_base
+            alert("PARA EL ASEGURADO" + nombre)
+            alert("El RECARGO TOTAL ES" +recargo_total)
+            alert("El PRECIO TOTAL ES" + precio_final)
+        }
+        else
+        {
+            alert("USTED NO CUMPLE CON LA EDAD REQUERIDA")
+        }
+        cotizar = prompt("DESEA REALIZAR OTRA COTIZACION", "Si o No")
+        }
+
+    </script>
+</body>
+</html>
