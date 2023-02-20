@@ -1,0 +1,8 @@
+DESCRIPCION DEL PROBLEMA
+
+En este programa uno de los problemas que se podria mejorar al fondo en el funcionamiento
+es que no se le permita a los usuarios que ingresen datos o caracteres que no sean requeridos
+por el propio sistema.
+
+Crear un poco mas de formalidad en realizar las cotizaciones donde logre imprimir una dato mas exacto
+en un formato mas ameno para el cliente, tanto como guia para el seguro.

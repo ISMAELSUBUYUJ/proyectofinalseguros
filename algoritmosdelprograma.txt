@@ -1,0 +1,20 @@
+ALGORITMOS DE PROCEDIMIENTOS
+
+COTIZACION SEGUROS TK-U
+
+-Consultar si el cliente desea realizar una cotizacion.
+- En que caso de ser si, continuar con la solicitud de datos requeridos.
+- En caso de ser no la respuesta, cerrar el programa.
+- Hacer la solicitud de consulta de nombre
+- Consultarle la edad del solicitante
+- En caso de no ser mayor de edad, mostrarle un mensaje que le indique que no es admitido por su edad, y consultarle nuevamente si desea realizar otra consulta
+- En caso de ingresar una edad admitida mayor a 18 a;os, verificar su edad, y aplicarle el recargo necesario segun sea su edad.
+- Consultar sobre su status laboral, en caso de ser negativa la respuesta continuar.
+- De ser si la respuesta del staturs laboral, se procede a consultar sobre el ingreso mensual (salario), para aplicar los recargos segun sean requeridos por el seguro.
+- Consultar sobre su status de propiedades, en caso de ser negativa la respuesta continuar.
+- De ser si la respuesta del staturs de propiedades, se procede a consultar la cantidad de propiedades, para aplicar los recargos segun sean requeridos por el seguro.
+- Relizar la consulta de si tiene esposa/o, de ser positiva la respuesta, proceder a consulta la edad para poder aplicar los recargos necesarios segun nuevamente sean requeridos por el seguro.
+- De ser negativo el status del estado civil, procede a realizar una nueva consulta, sin aplicar ningun recargo en esta.
+- Realizar la consulta si tiene hijos, de ser positiva la respuesta consultar nuevamente cuantos hijos tiene, para poder aplicar los recargos que sean necesarios segun el seguro.
+-Procedemos a mostrar un mensaje con su nombre, el costo del recargo segun sean sus respuesta anteriores, y se le muestra el precio total a pagar.
+-Culminada la cotizacion, procede nuevamente a consultar si desea nuevamente otra cotizacion, se ser si, se procede nuevamente con todos los datos, de ser no la respuesta se cierra el programa en automatico.

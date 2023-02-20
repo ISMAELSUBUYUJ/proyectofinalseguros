@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROYECTO FINAL</title>
+    <title>SEGUROS TK-U</title>
 </head>
 <body>
     <script>
@@ -23,8 +23,8 @@
         var casado_50 = 0.3 // 30%
 
         var hijos_recargo = 0.2 // 20%
-
-       var cotizar = prompt("Quiere realizar una cotizacion?", "Si o No")
+        alert("BIENVENIDO A SEGUROS TK-U")
+       var cotizar = prompt("¿DESEAS REALIZAR UNA COTIZACION DE SEGUROS?", "Si o No")
        while("SI"== cotizar.toUpperCase())
        {
             var nombre = prompt("INGRESE SU NOMBRE", "Unicamente Letras")
@@ -50,18 +50,18 @@
                 }  
             
                 //CONSULTAMOS SOBRE SU STATUS LABORAL
-                var empleo = prompt("USTED ACTUALMENTE TRABAJA?", "Si o No")
+                var empleo = prompt("¿USTED ACTUALMENTE TRABAJA?", "Si o No")
                 if("SI"== empleo.toUpperCase())
                 {
-                    var salario = prompt("CUAL ES EL MONTO DE SU SUELDO?")
+                    var salario = prompt("¿CUAL ES EL MONTO DE SU SUELDO?")
                     recargo = salario *0.05
                     recargo_total= recargo_total + recargo
                 }
 //CONSULTAMOS SOBRE SU STATUS DE PROPIEDADES
-            var propiedades = prompt("USTED CUENTA CON PROPIEDADES?", "Si o No")
+            var propiedades = prompt("¿USTED CUENTA CON PROPIEDADES?", "Si o No")
             if("SI"== propiedades.toUpperCase())
             {
-                var total_propiedades = prompt("CON CUANTAS PROPIEDADES CUENTA ACTUALMENTE?")
+                var total_propiedades = prompt("¿CON CUANTAS PROPIEDADES CUENTA ACTUALMENTE?")
                 calcular_recargo = (total_propiedades*35)
                 recargo = (precio_base + total_propiedades)/100
                 recargo_total= recargo_total + recargo
@@ -91,7 +91,7 @@
             var hijos = prompt("¿TIENE HIJOS/AS?", "Si o No")
             if("SI" == estado_civil.toUpperCase())
             {
-                var cantidad_hijos = prompt("CUANTOS HIJOS/AS TIENE", "Por Favor Ingresa Numeros")
+                var cantidad_hijos = prompt("¿CUANTOS HIJOS/AS TIENE?", "Por Favor Ingresa Numeros")
                 if ( cantidad_hijos>=1)
                 {
                     recargo = precio_base * hijos_recargo
@@ -99,15 +99,15 @@
                 }
             }
             var precio_final = recargo_total + precio_base
-            alert("PARA EL ASEGURADO" + nombre)
-            alert("El RECARGO TOTAL ES" +recargo_total)
-            alert("El PRECIO TOTAL ES" + precio_final)
+            alert("PARA EL ASEGURADO " +  nombre)
+            alert("El RECARGO TOTAL ES " + recargo_total)
+            alert("El PRECIO TOTAL ES " + precio_final)
         }
         else
         {
             alert("USTED NO CUMPLE CON LA EDAD REQUERIDA")
         }
-        cotizar = prompt("DESEA REALIZAR OTRA COTIZACION", "Si o No")
+        cotizar = prompt("¿DESEA REALIZAR OTRA COTIZACION?", "Si o No")
         }
 
     </script>
